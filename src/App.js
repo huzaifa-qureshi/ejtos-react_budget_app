@@ -1,35 +1,38 @@
-import React from 'react';
+.App {
+  text-align: center;
+}
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
 
-//Code to import Budget.js
-import Budget from './components/Budget';
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
 
-// Add code to import the other components here under
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
 
+.App-link {
+  color: #61dafb;
+}
 
-import { AppProvider } from './context/AppContext';
-const App = () => {
-    return (
-        <AppProvider>
-            <div className='container'>
-                <h1 className='mt-3'>Company's Budget Allocation</h1>
-                    <div className='row mt-3'>
-                        {/* Add Budget component here under */}        
-
-                        {/* Add Remaining component here under */}        
-
-                        {/* Add ExpenseTotal component here under */}        
-                       
-                        {/* Add ExpenseList component here under */}         
-
-                        {/* Add ExpenseItem component here under */}        
-
-                        {/* Add AllocationForm component here under */}        
-
-                </div>
-            </div>
-        </AppProvider>
-    );
-};
-export default App;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
